@@ -45,4 +45,4 @@ The files in the 'walks' folder are generated based on the codes from the node2v
 
 ### Ground truth
 Ground truth for node classification is in the form of "index of node : index of class".
-Ground truth for link prediction is in the form of "index of node 2 \t index of node 2 \t linked (1) / non-linked (0)".
+Ground truth for link prediction is in the form of "index of node 1 \t index of node 2 \t linked (1) / non-linked (0)".
