@@ -2,6 +2,23 @@
 
 This is a pytorch implementation of the VANE framework from paper "A View-Adversarial Framework for Multi-View Network Embedding".
 
+# Requirements
+
+We test our codes with python 3.6, pytorch 1.6, and scikit-learn 0.23.2.
+
+# Remarks
+
+### Datasets
+We provide preprocessed Twitter-Rugby data for reproduction.
+Links for original data: Aminer (https://www.aminer.cn/citation), Twitter-Rugby (http://mlg.ucd.ie/aggregation).
+
+### Walks file
+The files in the 'walks' folder are generated based on the codes from the node2vec repo (https://github.com/aditya-grover/node2vec) and the first number of each line indicates the index (0-based index) of view this path comes from. The walks file used for link prediction is generated from a graph deleted 10% of its links.
+
+### Ground truth
+Ground truth for node classification is in the form of "index of node : index of class".
+Ground truth for link prediction is in the form of "index of node 1 \t index of node 2 \t linked (1) / non-linked (0)".
+
 If you use the corresponding codes, please cite the following paper:
 
 ```
@@ -29,20 +46,3 @@ If you use the corresponding codes, please cite the following paper:
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
-
-# Requirements
-
-We test our codes with python 3.6, pytorch 1.6, and scikit-learn 0.23.2.
-
-# Remarks
-
-### Datasets
-We provide preprocessed Twitter-Rugby data for reproduction.
-Links for original data: Aminer (https://www.aminer.cn/citation), Twitter-Rugby (http://mlg.ucd.ie/aggregation).
-
-### Walks file
-The files in the 'walks' folder are generated based on the codes from the node2vec repo (https://github.com/aditya-grover/node2vec) and the first number of each line indicates the index (0-based index) of view this path comes from. The walks file used for link prediction is generated from a graph deleted 10% of its links.
-
-### Ground truth
-Ground truth for node classification is in the form of "index of node : index of class".
-Ground truth for link prediction is in the form of "index of node 1 \t index of node 2 \t linked (1) / non-linked (0)".
